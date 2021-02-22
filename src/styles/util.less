@@ -1,0 +1,82 @@
+a {
+  //全局a标签颜色
+  color: @color-blue-6;
+
+  &:hover {
+    color: @color-blue-5;
+  }
+
+  &:active {
+    color: @color-blue-7;
+  }
+}
+
+a[disabled] {
+  //全局a标签不可用颜色
+  color: @color-black-5;
+}
+
+.u-primary {
+  color: @primary-color;
+}
+
+// 标题
+.u-title {
+  color: @color-black-9;
+}
+
+// 全局副标题颜色
+.u-subtitle {
+  color: @color-black-8;
+}
+
+.u-thirdtitle {
+  color: @color-black-6;
+}
+
+.loop(@counter) when (@counter >=0) {
+  .loop((@counter - 1)); // next iteration
+  @num: @counter * 5;
+
+  .u-mg@{num} {
+    margin: @num * 1px;
+  }
+
+  .u-mgt@{num} {
+    margin-top: @num * 1px;
+  }
+
+  .u-mgb@{num} {
+    margin-bottom: @num * 1px;
+  }
+
+  .u-mgl@{num} {
+    margin-left: @num * 1px;
+  }
+
+  .u-mgr@{num} {
+    margin-right: @num * 1px;
+  }
+
+  .u-pd@{num} {
+    padding: @num * 1px;
+  }
+
+  .u-pdt@{num} {
+    padding-top: @num * 1px;
+  }
+
+  .u-pdb@{num} {
+    padding-bottom: @num * 1px;
+  }
+
+  .u-pdl@{num} {
+    padding-left: @num * 1px;
+  }
+
+  .u-pdr@{num} {
+    padding-right: @num * 1px;
+  }
+}
+
+.loop(20);
